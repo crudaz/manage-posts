@@ -15,8 +15,7 @@ export class ButtonComponent implements OnInit {
   }
 
   handleClick() {
-    // console.log('handleClick');
-    this.action.emit('button + pressed');
+    this.action.emit('new');
   }
 
 }
