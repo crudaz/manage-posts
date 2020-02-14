@@ -1,0 +1,5 @@
+<app-header (action)="handleAction($event)"></app-header>
+
+<div *ngFor="let post of posts$">
+    <app-card class="cards" [item]="post"></app-card>
+</div>
