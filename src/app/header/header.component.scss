@@ -3,6 +3,10 @@
         margin-left: 20px;
     }
 
+    &__image {
+        height: calc( 96px - 3rem);
+    }
+
 }
 .fill-space {
     flex: 1 1 auto;
