@@ -1,6 +1,13 @@
 <mat-toolbar class="header">
-    <img class="header__image" src="https://via.placeholder.com/150x50">
-    <span class="header__title">Talos technical test</span>
+    <img class="header__image" src="../../assets/images/bg.png">
+    <span class="header__title">{{title}}</span>
     <span class="fill-space"></span>
-    <app-button class="header__button" text="+" (action)="handleAction($event)"></app-button>
+    <span>Posts</span>
+    <app-button
+        class="header__button"
+        [text]="btnName" 
+        (mouseover)="changeBtnName('Add new post')"
+        (mouseleave)="changeBtnName('+')"
+        (action)="handleAction($event)">
+    </app-button>
 </mat-toolbar>
