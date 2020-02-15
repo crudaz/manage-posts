@@ -1,5 +1,15 @@
-<app-header (action)="handleAction($event)"></app-header>
-
-<div *ngFor="let post of posts$">
-    <app-card class="cards" [item]="post"></app-card>
-</div>
+<content>
+    <header>
+        <app-header class="header" (action)="handleAction($event)"></app-header>
+    </header>
+    <main>
+        <div *ngFor="let post of posts$">
+            <app-card class="cards" [item]="post"></app-card>
+        </div>
+    </main>
+    <footer>
+        All rights reversed.
+        <br>
+        <small>I am always at the bottom of the page</small>
+    </footer>
+</content>

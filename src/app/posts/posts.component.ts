@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class PostsComponent implements OnInit {
   posts$: Object;
   currentPost$: Object;
+  
 
   constructor(private http: HttpService) {}
 
