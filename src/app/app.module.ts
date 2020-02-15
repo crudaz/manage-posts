@@ -10,12 +10,14 @@ import { GlobalModule } from './global/global.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { PostsComponent } from './posts/posts.component';
+import { NewPostComponent } from './new-post/new-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PostsComponent,
+    NewPostComponent,
   ],
   imports: [
     BrowserModule,
