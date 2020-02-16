@@ -8,6 +8,10 @@ import { DetailComponent } from './detail/detail.component';
 
 const routes: Routes = [
   {
+    path: '',
+    component: PostsComponent
+  },
+  {
     path: 'posts',
     component: PostsComponent
   },

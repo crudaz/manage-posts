@@ -20,7 +20,6 @@ export class HeaderComponent implements OnInit {
   }
 
   handleAction(e) {
-    // this.action.emit(e);
     this.router.navigate(['new']);
   }
 

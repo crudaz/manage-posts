@@ -1,1 +1,31 @@
-<p>new-post works!</p>
+<form [formGroup]="postForm" autocomplete="off">
+    <span>Title:</span>
+    <input type = "text" 
+          name = "title" 
+          placeholder = "title" 
+          formControlName="title" 
+          #title>
+    <br/>
+    <span>Description:</span>
+    <input type = "text" 
+          name = "description" 
+          placeholder = "description" 
+          formControlName="description" 
+          #description>
+    <br/>
+    <span>Tags:</span>
+    <input type = "text" 
+          name = "tags" 
+          placeholder = "tags" 
+          formControlName="tags" 
+          #tags>
+    <button (click)="addTag(tags.value); tags.value=''">Add Tag</button>
+    <br/>
+
+    <input type = "submit" 
+            value = "submit" 
+            (click) = "onClickSubmit(title.value, description.value)" >
+  </form>
+
+  <img [src]="url" height="200"> <br/>
+  <input type='file' (change)="onSelectFile($event)">
