@@ -1,29 +1,10 @@
-content {
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 100%;
-}
-
-header {
-    background: lightskyblue;
-    padding: 1rem;
-}
-
-main {
-    background: whitesmoke;
-    color: #444;
-    padding: 2rem;
+:host {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
-    & > div {
+    .cards {
         display: flex;
-        flex-grow: 1;
-        justify-content: center;
+        padding: 20px;
     }
-}
-
-footer {
-    background: lightskyblue;
-    padding: 1rem;
-}
+  }

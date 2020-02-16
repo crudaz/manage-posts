@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HttpService } from '../http.service';
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-posts',
@@ -10,9 +10,8 @@ import { Observable } from 'rxjs';
 export class PostsComponent implements OnInit {
   posts$: Object;
   currentPost$: Object;
-  
 
-  constructor(private http: HttpService) {}
+  constructor(private http: HttpService, private router: Router) {}
 
   ngOnInit() {
     this.getPosts();
@@ -21,26 +20,6 @@ export class PostsComponent implements OnInit {
   getPosts() {
     this.http.getPosts()
     .subscribe(res => this.posts$ = res);
-  }
-
-  addPost() {
-    const newPost = {
-      "title": "post3 title",
-      "description": "post3 description",
-      "tags": [
-        "tag1"
-      ]
-    };
-
-    this.http.addPost(newPost).subscribe(
-      res => {
-        console.log('addPost: ', res);
-        this.getPosts();
-      },
-      err => {
-        console.log(err);
-      }
-    );
   }
 
   getPostById(id) {
@@ -63,10 +42,8 @@ export class PostsComponent implements OnInit {
     );
   }
 
-
-  handleAction(e) {
-    console.log('post: ', e);
-    this.addPost();
+  handleView(e) {
+    this.router.navigate(['detail', e.id]);
   }
 
 }
