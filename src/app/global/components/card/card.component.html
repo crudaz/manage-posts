@@ -6,6 +6,6 @@
     </mat-card-content>
     <mat-card-actions >
         <span *ngFor="let tag of item.tags">{{tag}}</span>
-        <app-button text="View"></app-button>
+        <app-button text="View" (action)="handleAction(item)"></app-button>
     </mat-card-actions>
 </mat-card>

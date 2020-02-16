@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -7,11 +7,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
   @Input() item;
+  @Output() actionView = new EventEmitter<any>();
   
   constructor() { }
 
   ngOnInit() {
     this.item.photoUrl = `http://localhost:3000/${this.item.photoUrl}`;
+  }
+
+  handleAction(item) {
+    this.actionView.emit(item);
   }
   
 }
