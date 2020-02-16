@@ -1,0 +1,10 @@
+<div class="container">
+    <img [src]="baseImageUrl+post$.photoUrl" class="img" /> 
+</div>
+
+<div>{{post$.title}}</div>
+<div>{{post$.description}}</div>
+
+<div *ngFor="let tag of post$.tags">
+    <span>{{tag}}</span>
+</div>

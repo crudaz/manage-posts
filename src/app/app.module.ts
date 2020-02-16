@@ -5,12 +5,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GlobalModule } from './global/global.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { PostsComponent } from './posts/posts.component';
 import { NewPostComponent } from './new-post/new-post.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { NewPostComponent } from './new-post/new-post.component';
     HeaderComponent,
     PostsComponent,
     NewPostComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +28,8 @@ import { NewPostComponent } from './new-post/new-post.component';
     AppRoutingModule,
     HttpClientModule,
     MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
     GlobalModule
   ],
   providers: [],
